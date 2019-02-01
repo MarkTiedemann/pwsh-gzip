@@ -1,5 +1,6 @@
 
 $ErrorActionPreference = 'Stop'
+Set-PSDebug -Trace 1
 
 # Cleanup
 Remove-Item test.txt* -Force -ErrorAction SilentlyContinue

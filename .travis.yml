@@ -4,13 +4,17 @@ matrix:
       os:
         - linux
       before_script:
+        - chmod +x install_linux.sh
         - ./install_linux.sh
       script:
+        - chmod +x test_unix.sh
         - ./test_unix.sh
     - language: sh
       os:
         - osx
       before_script:
+        - chmod +x install_osx.sh
         - ./install_osx.sh
       script:
+        - chmod +x test_unix.sh
         - ./test_unix.sh
