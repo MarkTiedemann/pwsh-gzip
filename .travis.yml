@@ -1,0 +1,16 @@
+matrix:
+  include:
+    - language: sh
+      os:
+        - linux
+      before_script:
+        - ./install_linux.sh
+      script:
+        - ./test_unix.sh
+    - language: sh
+      os:
+        - osx
+      before_script:
+        - ./install_osx.sh
+      script:
+        - ./test_unix.sh

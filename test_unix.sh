@@ -5,16 +5,14 @@ set -ev
 # Cleanup
 rm -f test.txt*
 
-# Prepare
+# Test
 text="Hello world!"
 echo "$text" > test.txt
-
-# Test gzip
+# - gzip
 pwsh gzip.ps1 test.txt test.txt.gz
 gunzip -f test.txt.gz
 grep -q "$text" test.txt
-
-# Test gunzip
+# - gunzip
 gzip -f test.txt
 pwsh gunzip.ps1 test.txt.gz test.txt
 grep -q "$text" test.txt
