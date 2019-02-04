@@ -5,7 +5,7 @@ set -ev
 version=6.1.0
 
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$version/powershell-6.1.0-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$version/powershell-$version-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
 sudo mkdir -p /usr/local/microsoft/powershell/$version
