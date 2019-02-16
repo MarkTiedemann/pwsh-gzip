@@ -1,6 +1,4 @@
 build: off
-install:
-  - ps: .\install_win.ps1
 test_script:
   - ps: .\test_win.ps1
-  - ps: pwsh .\test_win.ps1
+  - pwsh .\test_win.ps1
